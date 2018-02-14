@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>CATEGORÍAS</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="logout()">
+        <ion-icon ios="ios-exit" md="md-exit" class="exit-icon"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      refreshingSpinner="circles"
+      refreshingText="Actualizando Productos...">
+    </ion-refresher-content>
+  </ion-refresher>
+  <ion-card *ngFor="let item of items" class="content-category" (click)="products(item)">
+    <p>{{item.nombre}}</p>
+    <img src="{{item.imagen}}" alt="categoria" class="img-category">    
+  </ion-card>
+</ion-content>

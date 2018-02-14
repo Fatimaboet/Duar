@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>LISTA PRECIOS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-card class="content-products">
+		<ion-searchbar
+		  [(ngModel)]="myInput"
+		  [showCancelButton]="true"
+		  (ionInput)="onInput($event)"
+		  placeholder="">
+		</ion-searchbar>
+		<div *ngFor="let item of items">
+		    <ion-row class="item-product">
+		      <ion-col col-3>
+		        <img class="img-product" src="{{item.imagen}}" imageViewer>
+		        <p class="unit-product">{{item.unidad}}</p>
+		      </ion-col>
+		      <ion-col col-9>
+		        <p class="title-product">{{item.nombre}}</p>
+		        <p class="price-product">${{item.costo}} mxn</p>
+		      </ion-col>
+		    </ion-row>
+	    </div>
+	</ion-card>
+</ion-content>

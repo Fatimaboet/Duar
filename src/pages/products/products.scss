@@ -1,0 +1,76 @@
+page-products {
+	.car-product{
+		height: 100% !important;
+    	margin: 5px !important;
+    	width: calc(100% - 10px) !important;
+	}
+	.content-img{
+		height: 130px !important;
+		margin-bottom: 8px;
+	}
+	ion-card img{
+		height: 100%;
+		object-fit: cover !important;
+	}
+	.check-product{
+		position: absolute !important;
+	    display: block;
+	    width: calc(100% - 20px);
+    	height: calc(100% - 15px);
+    	top: 10px;
+    	z-index: 1;
+	}
+	.checkbox-ios .checkbox-checked, .checkbox-md .checkbox-checked {
+	    border-color: #c71717;
+	    background-color: #c71717;
+	}
+	.icon-product{
+		position: absolute;
+	    left: 5px;
+	    bottom: -5px;
+	    background-color: rgba(0,0,0,0.8);
+	    color: #fff;
+	    padding: 7px 8px;
+	    border-radius: 50%;
+	    width: 30px;
+	    height: 30px;
+	    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+		z-index: 2;
+	}
+	.center{
+		text-align:center;
+	}
+	.b1-login{
+		border-radius: 18px;
+	    background-color: #c71717;
+	    color: #fff;
+	    font-size: 18px;
+	    height: 40px;
+	    font-weight: normal;	
+	}
+	.checkbox-md .checkbox-icon, .checkbox-ios .checkbox-icon{
+		width: 18px;
+		height: 18px;
+		position: absolute;
+    	right: 5px;
+    	bottom: 0px;
+	}
+	.check{
+		position: absolute;
+	    left: 0px;
+	    right: 0px;
+	    top: 0px;
+	    bottom: 0px;
+	    font-size: 85px;
+	    display: block;
+	    color: #c71717;
+	    background-color: rgba(255, 255, 255,1);
+	    /* width: 100%; */
+	    /* margin: 10px 0px; */
+	    margin-left: 10px;
+	    margin-right: 10px;
+	    margin-top: 10px;
+	    padding: 20px 35px;
+	    opacity: 0.5;
+	}
+}

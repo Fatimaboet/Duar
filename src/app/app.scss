@@ -1,0 +1,92 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.content-md, .content-ios {
+    position: relative;
+    background: #f8f8f8;
+    overflow: hidden;
+}
+.content-md:before, .content-ios:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+    background-image: url('https://image.freepik.com/vector-gratis/fondo-abstracto-con-un-patron-3d_1319-68.jpg');
+    background-repeat: no-repeat;
+    -ms-background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+.bar-button-default-ios, .bar-button-default-md{
+	color: #f8f8f8;
+}
+.item-input-has-focus .label-md[stacked], .input-has-focus .label-md[stacked], .item-input-has-focus .label-ios[stacked], .input-has-focus .label-ios[stacked]{
+  color: #0a4e9e;
+}
+.toolbar-background-md, .toolbar-background-ios {
+    background: #0a4e9d;
+}
+.toolbar-title{
+  overflow: visible;
+  color: #f8f8f8;
+  font-weight: bold;
+}
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom-color: #757575;
+    -webkit-box-shadow: inset 0 -1px 0 0 #757575;
+    box-shadow: inset 0 -1px 0 0 #757575;
+}
+.alert-md .alert-button, .alert-ios .alert-button{
+	color: #c71717 !important;
+}
+.list-md .item-input:last-child, .list-md .item-block .item-inner, .list-ios > .item-block:first-child, .list-ios .item-block .item-inner, .list-ios > .item-block:last-child{
+    border-bottom: none;
+    border-top: none;
+}
+.item-ios.item-block .item-inner{
+  padding-right: 0px;
+}
+.item-input .label-md, .label-ios{
+    color: #f5f5f5;
+}
+.text-input::-moz-placeholder {
+  color: #f5f5f5;
+  text-align: center;
+}
+.text-input:-ms-input-placeholder {
+  color: #f5f5f5;
+  text-align: center;
+}
+.text-input::-webkit-input-placeholder {
+  color: #f5f5f5;
+  text-align: center;
+}  
+.center{
+    text-align:center;
+}
+.button-md.activated{
+  background-color: #4b5059;
+}
+.loading-md .spinner-crescent circle {
+    stroke: #c71717;
+}

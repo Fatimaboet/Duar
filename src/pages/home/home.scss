@@ -1,0 +1,22 @@
+page-home {
+	ion-content.has-refresher > .scroll-content {
+	    background-color: transparent;
+	}
+	.content-category{
+		background-color: rgba(177, 186, 200,0.6);
+		overflow: hidden;
+		text-align: center;
+		padding-bottom: 10px;
+		border-radius: 15px;
+		p{
+			font-size: 22px;
+			text-transform: uppercase;
+			font-weight: bold;
+			margin: 10px 0px;
+		}
+	}
+	.img-category{
+		height: 180px;
+		opacity: 0.85;
+	}
+}

@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>REGISTRO</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="center">
+		<img src="{{image}}" class="img-header" width="100%">
+	</div>
+	<form [formGroup]="registerUserForm" (ngSubmit)="register(registerUserForm)" class="content_form">
+		<ion-list>
+		    <ion-item>
+		      <ion-label> <ion-icon ios="ios-person" md="md-person"></ion-icon></ion-label>
+		      <ion-input clearInput type="text" name="nombre" placeholder="NOMBRE*" formControlName="nombre"></ion-input>
+		    </ion-item>
+		    <div *ngIf="formErrors.nombre" class="alert-danger">
+	          {{ formErrors.nombre }}
+	        </div>
+		    <ion-item>
+		      <ion-label><ion-icon name="mail" md="md-mail"></ion-icon></ion-label>
+		      <ion-input clearInput type="email" name="correo" placeholder="CORREO ELECTRÓNICO*" formControlName="correo"></ion-input>
+		    </ion-item>
+		    <div *ngIf="formErrors.correo" class="alert-danger">
+	          {{ formErrors.correo }}
+	        </div>
+		    <ion-item>
+		      <ion-label><ion-icon ios="ios-call" md="md-call"></ion-icon></ion-label>
+		      <ion-input clearInput type="number" name="telefono" placeholder="TELÉFONO DE CONTACTO*" formControlName="telefono"></ion-input>
+		    </ion-item>
+		    <div *ngIf="formErrors.telefono" class="alert-danger">
+	          {{ formErrors.telefono }}
+	        </div>
+		    <ion-item>
+		      <ion-label> <ion-icon ios="ios-person" md="md-person"></ion-icon></ion-label>
+		      <ion-input clearInput type="text" name="usuario" placeholder="USUARIO*" formControlName="user"></ion-input>
+		    </ion-item>
+		    <div *ngIf="formErrors.user" class="alert-danger">
+	          {{ formErrors.user }}
+	        </div>
+		     <ion-item>
+		        <ion-label><ion-icon ios="ios-key" md="md-key"></ion-icon></ion-label>
+				<ion-input clearInput type="password" name="password" placeholder="CONTRASEÑA*" formControlName="password"></ion-input>
+		    </ion-item>
+			<div *ngIf="formErrors.password" class="alert-danger">
+	          {{ formErrors.password }}
+	        </div>
+		    <ion-item>
+		    	<ion-label><ion-icon ios="ios-key" md="md-key"></ion-icon></ion-label>
+				<ion-input clearInput type="password" name="rpassword" placeholder="CONFIRMAR CONTRASEÑA*" formControlName="rpassword"></ion-input>
+		    </ion-item>
+		    <div *ngIf="formErrors.rpassword" class="alert-danger">
+	          {{ formErrors.rpassword }}
+	        </div>
+	        <ion-item class="content-check">
+				<ion-label class="black"><a (click)="terminos()">Acepto los términos de servicio</a></ion-label>
+			    <ion-checkbox class="check-product" formControlName="check"></ion-checkbox>
+			</ion-item>
+	  	</ion-list>
+
+	  	<div class="center">
+			<button ion-button class="b1-login" type="submit">REGISTRAR</button>
+		</div>
+	</form>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>DIRECCIÓN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content [ngClass]="{ 'bg-color': type != 'location' }">
+	<div [ngClass]="{ 'hide': type != 'location' }" style="height:100%;">
+		<div *ngIf="refresh" class="center" (click)="getCurrentPosition()"><ion-icon ios="ios-refresh" md="md-refresh" class="icon-refresh"></ion-icon></div>
+		<div class="content-order"><div #map id="map"></div></div>
+		<div class="center button-map">
+		  <button ion-button class="b1-login" [disabled]="refresh" (click)="order()">ENVIAR PEDIDO</button>
+		</div>
+	</div>   
+	<div [ngClass]="{ 'hide': type != 'address' }" >
+		<br>
+		<form (ngSubmit)="order()" #orderForm="ngForm" class="content-dir">
+		  <ion-list>
+		    	<p class="item_label">DIRECCIÓN*</p>
+				<ion-item>
+				<ion-label> <ion-icon ios="ios-locate" md="md-locate"></ion-icon></ion-label>
+				<ion-input clearInput type="text" name="nombre" [(ngModel)]="Orders.direccion" required></ion-input>
+				</ion-item>
+				<p class="item_label">DESCRIPCIÓN DEL LUGAR*</p>
+				<ion-item>
+				<ion-label><ion-icon name="pin"></ion-icon></ion-label>
+				<ion-textarea clearInput type="text" name="descripcion" [(ngModel)]="Orders.descripcion" required></ion-textarea>
+				</ion-item>
+		    </ion-list>
+		    <div class="center">
+		      <button ion-button class="b1-login" type="submit" [disabled]="!orderForm.form.valid">ENVIAR PEDIDO</button>
+		    </div>
+		</form>   
+	</div> 
+</ion-content>

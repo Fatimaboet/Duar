@@ -1,0 +1,66 @@
+page-registro-usuario { 
+	.b1-login{
+		border-radius: 18px;
+	    background-color: #c71717;
+	    color: #fff;
+	    font-size: 18px;
+	    height: 40px;
+	    font-weight: normal;	
+	}
+	.img-header{
+		box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+	.list-ios {
+    	margin: -1px 0 0px;
+	}
+	.ml-25{
+		margin-left: 25px;
+	}
+	.content_form {
+	    position: relative;
+	    background: rgba(255, 255, 255, 0.6);
+	    overflow: hidden;
+	    padding: 15px 0px 20px;
+	    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+	.item-md, .item-ios{
+	    border-radius: 6px;
+	    background-color: rgba(75, 80, 89, 0.8);
+	    color: #f5f5f5;
+	    width: 95%;
+	    margin: auto;
+	    margin-bottom: 10px;
+    	margin-top: 15px;
+	    font-size: 14px;
+	    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+	}
+	.alert-danger{
+	    position: relative;
+	    font-size: 12px;
+	    margin-left: 10px;
+	    color: #c71717;
+	    font-weight: bold;
+	}
+	.item.item-md .checkbox-md {
+	    margin: 9px 15px 9px 0px;
+	}
+	.content-check{
+		background-color: transparent;
+    	box-shadow: none;
+    	color: #000;
+	}
+	.checkbox-md .checkbox-checked, .checkbox-ios .checkbox-checked {
+	    border-color: #c71717;
+	    background-color: #c71717;
+	}
+	.black{
+		color: #000;
+	}
+	.item-cover{
+		z-index: -1;
+	}
+	a {
+	    color: #333;
+	    text-decoration: underline;
+	}
+}

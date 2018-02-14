@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>PRODUCTOS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="has-header">
+    <ion-row wrap>
+	    <ion-col class="content-img" col-6 col-sm-4 *ngFor="let item of items">
+	      <ion-card class="car-product">
+	      	<img style="width: 100%; height: 100%;object-fit: cover;" src="{{item.imagen}}" #myImage>
+	      	<ion-icon ios="ios-checkmark" md="md-checkmark" class="check" *ngIf="item.chek == true"></ion-icon>
+	      	<ion-icon class="icon-product" ios="ios-eye" md="md-eye" (click)="presentImage(myImage)"></ion-icon>
+	      	<ion-checkbox class="check-product" [(ngModel)]="item.check" (ionChange)="changeproduct($event,item)"></ion-checkbox>
+	      </ion-card>
+	    </ion-col>
+    </ion-row>
+    <br><br>
+    <div class="center">
+		<button ion-button class="b1-login" [disabled]="itemscart == 0" (click)="order()">HACER PEDIDO</button>
+	</div>
+</ion-content>

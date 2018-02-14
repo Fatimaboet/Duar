@@ -1,0 +1,34 @@
+<ion-content>
+	<div class="content-cart">
+		<div class="content_img">
+			<img src="assets/img/logo.png" alt="Duar">
+		</div>
+		<ion-card class="card-content">
+			<form #loginForm="ngForm">
+				<ion-list>
+				    <ion-item>
+				      <ion-label stacked>Usuario</ion-label>
+				      <ion-label class="icon-input"><ion-icon ios="md-person" md="md-person"></ion-icon></ion-label>
+				      <ion-input type="text" name="user" [(ngModel)]="loginCredentials.user"></ion-input>
+				    </ion-item>
+
+				    <ion-item>
+				      <ion-label stacked>Constraseña</ion-label>
+				      <ion-label class="icon-input"><ion-icon ios="md-key" md="md-key"></ion-icon></ion-label>
+				      <ion-input type="password" name="password" [(ngModel)]="loginCredentials.password"></ion-input>
+				    </ion-item>
+					<div class="b2-login">
+						<p (click)="olvido_password()">¿Olvidaste Contraseña?</p>
+					</div>
+			  	</ion-list>
+				<div class="center">
+					<button ion-button icon-start class="b1-login" (click)="login()"><ion-icon ios="md-exit" md="md-exit" class="icon-button"></ion-icon> Entrar</button>
+					<button ion-button icon-start class="b1-login" (click)="registrar_usuario()"><ion-icon ios="md-person-add" md="md-person-add" class="icon-button"></ion-icon> Regístrate</button>
+				</div>
+			</form>
+		</ion-card>
+		<div class="center">
+			<p class="list-product" (click)="listado_productos()"> <ion-icon ios="md-paper" md="md-paper" class="icon-price"></ion-icon> <span>Listado de Precios</span></p>
+		</div>
+	</div>
+</ion-content>
